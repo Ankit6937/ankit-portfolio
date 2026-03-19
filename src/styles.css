@@ -15,10 +15,11 @@
   --light-text: #1a1a2e;
   --light-text-secondary: rgba(0, 0, 0, 0.7);
 }
-body { font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; background: var(--bg-dark); color: var(--text-light); overflow-x: hidden; -webkit-font-smoothing: antialiased; transition: background 0.3s ease, color 0.3s ease; }
+html { overflow-x: hidden; }
+body { font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; background: var(--bg-dark); color: var(--text-light); -webkit-font-smoothing: antialiased; transition: background 0.3s ease, color 0.3s ease; }
 body.light-mode { background: var(--light-bg); color: var(--light-text); }
 .container { max-width: 1400px; margin: 0 auto; padding: 0 40px; }
-.background-animation { position: fixed; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: 0; overflow: hidden; }
+.background-animation { position: fixed; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; touch-action: none; z-index: 0; overflow: hidden; }
 .floating-shapes { position: absolute; width: 100%; height: 100%; }
 .floating-shapes .shape { position: absolute; border-radius: 50%; filter: blur(60px); opacity: 0.15; animation: floatShapes 20s ease-in-out infinite; }
 .floating-shapes .shape-1 { width: 400px; height: 400px; background: linear-gradient(135deg, #a78bfa, #22d3ee); top: 10%; left: 10%; animation-duration: 25s; }
@@ -91,5 +92,29 @@ body.light-mode .background-animation .floating-shapes .shape { opacity: 0.08; }
   .footer { padding: 1.5rem 20px 0.5rem; }
   .footer-content { grid-template-columns: 1fr; text-align: center; }
 }
-body { overflow-x: hidden; max-width: 100vw; }
+/* overflow handled above */
 * { word-wrap: break-word; overflow-wrap: break-word; }
+
+/* ============================================
+   SCROLL FIX - ALL DEVICES
+   ============================================ */
+html {
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
+}
+
+body {
+  overflow-x: hidden;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.App {
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* Lock scroll only when mobile menu is open */
+body.menu-open {
+  overflow: hidden;
+}

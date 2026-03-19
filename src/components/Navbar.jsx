@@ -33,7 +33,10 @@ function Navbar({ darkMode, setDarkMode }) {
               <a
                 href={link.href}
                 className="nav-link"
-                onClick={() => setMenuOpen(false)}
+                onClick={() => {
+                  setMenuOpen(false);
+                  document.body.classList.remove("menu-open");
+                }}
               >
                 {link.label}
               </a>
@@ -51,7 +54,11 @@ function Navbar({ darkMode, setDarkMode }) {
           </button>
           <button
             className="mobile-menu-btn"
-            onClick={() => setMenuOpen(!menuOpen)}
+            onClick={() => {
+              const next = !menuOpen;
+              setMenuOpen(next);
+              document.body.classList.toggle("menu-open", next);
+            }}
             aria-label="Toggle menu"
           >
             <span></span>
