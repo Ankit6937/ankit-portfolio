@@ -25,7 +25,6 @@ function Navbar({ darkMode, setDarkMode }) {
       <div className="nav-container">
         <div className="nav-logo">
           <span className="logo-text">Ankit</span>
-          <span className="logo-dot">.</span>
         </div>
 
         <ul className={`nav-menu ${menuOpen ? "active" : ""}`}>
