@@ -1,0 +1,82 @@
+.intro-overlay {
+  position: fixed;
+  inset: 0;
+  background: #0a0a1a;
+  z-index: 99999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.7s ease;
+}
+
+.intro-fadeout {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.intro-content {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.intro-logo {
+  display: flex;
+  align-items: baseline;
+  gap: 2px;
+  animation: introZoom 0.6s ease both;
+}
+
+.intro-name {
+  font-size: 5rem;
+  font-weight: 900;
+  letter-spacing: -3px;
+}
+
+.intro-dot {
+  font-size: 6rem;
+  color: #22d3ee;
+  font-weight: 900;
+  line-height: 1;
+}
+
+.intro-bar {
+  width: 200px;
+  height: 3px;
+  background: rgba(167, 139, 250, 0.2);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.intro-bar-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #a78bfa, #22d3ee);
+  border-radius: 2px;
+  animation: introLoad 2s ease forwards;
+}
+
+.intro-tagline {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 0.9rem;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  font-weight: 600;
+  animation: introFadeIn 0.8s ease 0.4s both;
+}
+
+@keyframes introZoom {
+  from { opacity: 0; transform: scale(0.8); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes introLoad {
+  from { width: 0%; }
+  to { width: 100%; }
+}
+
+@keyframes introFadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
