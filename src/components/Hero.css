@@ -175,6 +175,20 @@
   transform: translateY(-4px);
 }
 
+/* ✅ VIEW CV BUTTON */
+.cv-hero-btn {
+  background: transparent;
+  color: #fff;
+  border: 2px solid rgba(167, 139, 250, 0.5);
+}
+
+.cv-hero-btn:hover {
+  background: rgba(167, 139, 250, 0.1);
+  border-color: #a78bfa;
+  transform: translateY(-4px);
+  box-shadow: 0 10px 30px rgba(167, 139, 250, 0.25);
+}
+
 /* TECH STACK BADGES */
 .hero-tech-stack {
   display: flex;

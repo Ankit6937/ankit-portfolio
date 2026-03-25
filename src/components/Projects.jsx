@@ -27,9 +27,16 @@ function Projects() {
         "Architected a secure authentication framework using JWT and protected REST APIs for role-based access control.",
         "Orchestrated WebSocket-based communication for instant response processing and dynamic leaderboard updates.",
       ],
-      tech: ["React.js", "Node.js", "Express.js", "MongoDB", "JWT", "Tailwind CSS"],
+      tech: [
+        "React.js",
+        "Node.js",
+        "Express.js",
+        "MongoDB",
+        "JWT",
+        "Tailwind CSS",
+      ],
       color: "#a78bfa",
-      githubLink: "https://github.com/Ankit6937",
+      githubLink: "https://github.com/Ankit6937/TargetQuiz",
       liveLink: null,
     },
     {
@@ -45,7 +52,7 @@ function Projects() {
       ],
       tech: ["HTML", "CSS", "JavaScript", "PHP", "MySQL", "XAMPP"],
       color: "#22d3ee",
-      githubLink: "https://github.com/Ankit6937",
+      githubLink: "https://github.com/Ankit6937/Artvibe-main",
       liveLink: "https://shimmer-portfolio-hub.vercel.app/",
     },
   ];

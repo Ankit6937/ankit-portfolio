@@ -60,7 +60,12 @@ function Hero() {
           </div>
 
           <div className="hero-actions">
-            <a href="https://linkedin.com/in/ankit6937" target="_blank" rel="noopener noreferrer" className="hero-btn primary-hero-btn">
+            <a
+              href="https://linkedin.com/in/ankit6937"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hero-btn primary-hero-btn"
+            >
               LinkedIn
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
                 <path
@@ -70,10 +75,21 @@ function Hero() {
                   strokeLinecap="round"
                   strokeLinejoin="round"
                 />
-                <circle cx="4" cy="4" r="2" stroke="currentColor" strokeWidth="2" />
+                <circle
+                  cx="4"
+                  cy="4"
+                  r="2"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                />
               </svg>
             </a>
-            <a href="https://github.com/Ankit6937" target="_blank" rel="noopener noreferrer" className="hero-btn secondary-hero-btn">
+            <a
+              href="https://github.com/Ankit6937"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hero-btn secondary-hero-btn"
+            >
               GitHub
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
                 <path
@@ -87,6 +103,49 @@ function Hero() {
             </a>
             <a href="#contact" className="hero-btn secondary-hero-btn">
               Contact Me
+            </a>
+            {/* ✅ View CV Button — Replace YOUR_GOOGLE_DRIVE_LINK_HERE with your actual link */}
+            <a
+              href="https://1drv.ms/b/c/650f5f13b4bcbe9b/IQDRSAInhpVdQKSudSoI6FTaATzpSlaO-bRSBbxE56UPwe8?e=3a2C22"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hero-btn cv-hero-btn"
+            >
+              View CV
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+                <path
+                  d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+                <polyline
+                  points="14 2 14 8 20 8"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+                <line
+                  x1="16"
+                  y1="13"
+                  x2="8"
+                  y2="13"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                />
+                <line
+                  x1="16"
+                  y1="17"
+                  x2="8"
+                  y2="17"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                />
+              </svg>
             </a>
           </div>
 
@@ -122,7 +181,9 @@ function Hero() {
               className="hero-avatar"
               onError={(e) => {
                 e.target.style.display = "none";
-                e.target.parentNode.querySelector(".avatar-fallback").style.display = "flex";
+                e.target.parentNode.querySelector(
+                  ".avatar-fallback",
+                ).style.display = "flex";
               }}
             />
             <div className="avatar-fallback" style={{ display: "none" }}>
